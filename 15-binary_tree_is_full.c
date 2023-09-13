@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_balance - measures the balance factor of a binary tree
- * @tree:  pointer to the root node balance factor
- * Return: 0 if tree is NULL
+ * binary_tree_balance - function that checks if a binary tree is full
+ * @tree:  pointer to the root node of tthe tree check
+ * Return: f tree is NULL, your function must return 0
  */
 
 int binary_tree_is_full(const binary_tree_t *tree)
@@ -12,7 +12,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		return (0);
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
-	if ((tree->left) && (tree->right))
+	if (tree->left && tree->right)
 		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
 	return (0);
 }
